@@ -15,12 +15,12 @@ module.exports = function (api) {
       pagesDir: 'src/pages',
       routePrefix: '',
       layoutsDir: 'src/layouts',
-      ignorePattern: "/(^|[\/\\])\../",
+      ignorePattern: '/(^|[/\\])../',
       outDir: 'src/router/auto-routing',
       pagesImportPrefix: 'pages/',
       generatorConfig: {
-        'nested': true
-      }
-    }
+        nested: true,
+      },
+    },
   })
 }
