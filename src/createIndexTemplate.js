@@ -10,8 +10,8 @@ const indexTemplate = `import { createRouterLayout } from 'vue-router-layout'
 import generatedRoutes from './generated-routes'
 
 const RouterLayout = createRouterLayout(layout => {
-  switch (layout) {
-    <% for (const [layout, layoutPath] of layouts) { %>case '<%= layout %>':
+  switch (layout) {<% for (const [layout, layoutPath] of layouts) { %>
+    case '<%= layout %>':
       return import('<%= layoutPath %>')<% } %>
     default:
       return import('<%= layouts.get('default') %>')
